@@ -1,4 +1,4 @@
-package simple
+package string
 
 import (
 	uuid "github.com/satori/go.uuid"
