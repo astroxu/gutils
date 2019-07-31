@@ -2,6 +2,7 @@ package markdown
 
 import (
 	"github.com/PuerkitoBio/goquery"
+	string2 "github.com/chegio/gutils/string"
 	"github.com/iris-contrib/blackfriday"
 	"github.com/microcosm-cc/bluemonday"
 	"github.com/sirupsen/logrus"
@@ -202,5 +203,5 @@ func (this *SimpleMd) summaryText(doc *goquery.Document) string {
 	}
 	text := doc.Text()
 	text = strings.TrimSpace(text)
-	return GetSummary(text, this.summaryTextLength)
+	return string2.GetSummary(text, this.summaryTextLength)
 }
